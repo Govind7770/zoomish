@@ -1,0 +1,38 @@
+.room { display: flex; flex-direction: column; height: 100dvh; }
+.topbar {
+  height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06); background: linear-gradient(180deg, rgba(16,22,40,.6), rgba(16,22,40,.25));
+  backdrop-filter: blur(8px);
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: .2px; }
+.badge-live { background: #dc262633; color: #fecaca; border: 1px solid #ef44441a; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+
+.layout { display: flex; flex: 1; min-height: 0; gap: 10px; padding: 10px; }
+.stage { flex: 1; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.tile {
+  position: relative; border-radius: 16px; overflow: hidden; background: #0b0f1a;
+  border: 1px solid rgba(255,255,255,0.06); box-shadow: var(--shadow);
+}
+.tile video { width: 100%; height: 100%; object-fit: cover; background: #000; }
+.tile .label {
+  position: absolute; left: 10px; bottom: 10px; padding: 6px 10px; border-radius: 10px;
+  font-size: 12px; color: #dbeafe; background: linear-gradient(180deg, rgba(37,99,235,.8), rgba(37,99,235,.5));
+  border: 1px solid rgba(59,130,246,.4);
+}
+
+.sidebar { width: 340px; display: flex; flex-direction: column; gap: 10px; }
+.panel { padding: 12px; border-radius: 16px; }
+.panel h3 { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: #cdd5e1; }
+
+.controls {
+  position: relative; display: flex; gap: 12px; padding: 12px; justify-content: center; align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.06); background: linear-gradient(0deg, rgba(16,22,40,.6), rgba(16,22,40,.2));
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08); background: rgba(17,24,39,.6); color: #e5e7eb;
+}
+.btn:hover { transform: translateY(-1px); background: rgba(17,24,39,.9); }
+.btn.primary { background: linear-gradient(180deg, #4f46e5, #3b82f6); border-color: #4462f0; }
+.btn.danger { background: linear-gradient(180deg, #ef4444, #be123c); border-color: #ef4343; }
+.indicator { font-size: 12px; color: var(--muted); }
